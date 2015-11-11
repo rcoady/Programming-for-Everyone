@@ -5,3 +5,17 @@
 # per hour to test the program (the pay should be 498.75). You should use raw_input
 # to read a string and float() to convert the string to a number. Do not worry about
 # error checking the user input - assume the user types numbers properly.
+
+hrs = raw_input("Enter Hours:")
+h = float(hrs)
+
+rate = raw_input("Enter Rate:")
+r = float(rate)
+
+if h > 40:
+    overtime = h - 40
+    total = (40 * r) + ((overtime * r) * 1.5)
+else:
+    total = h * r
+print total
+
