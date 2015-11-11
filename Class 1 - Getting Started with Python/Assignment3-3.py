@@ -10,3 +10,19 @@
 # < 0.6 F
 # If the user enters a value out of range, print a suitable error message and exit.
 # For the test, enter a score of 0.85.
+
+score = raw_input("What was the score:")
+score = float(score)
+
+if score > 1:
+    print "Out of range"
+elif score >= .9:
+    print "A"
+elif score >= .8:
+    print "B"
+elif score >= .7:
+    print "C"
+elif score >= .6:
+    print "D"
+else:
+    print "F"
