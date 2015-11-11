@@ -10,8 +10,18 @@
 
 
 def computepay(h, r):
-    return 42.37
+    if h > 40:
+        overtime = h - 40
+        total = (40 * r) + ((overtime * r) * 1.5)
+    else:
+        total = (h * r)
+    return total
 
 hrs = raw_input("Enter Hours:")
-p = computepay(10, 20)
-print "Pay", p
+hrs = float(hrs)
+
+rate = raw_input("Enter Rate:")
+rate = float(rate)
+
+p = computepay(hrs, rate)
+print p
